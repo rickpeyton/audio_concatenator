@@ -7,12 +7,12 @@ alphabetically.
 
 
 # Build it
-docker build -t audio .
+`docker build -t audio .`
 
 
 # Run it
-docker run -it --rm --name concatenator audio /bin/bash
+`docker run -it --rm --name concatenator audio /bin/bash`
 
 
 # Copy out your file
-docker cp concatenator:/app/book.mp3 .
+`docker cp concatenator:/app/book.mp3 .`
