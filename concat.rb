@@ -1,8 +1,12 @@
-require 'fileutils'
+require "fileutils"
 
 Dir.glob("**/*.mp3").each do |source|
-  renamed = source.gsub(/[^\w|.]/, "_")
-  FileUtils.mv source, renamed
+  begin
+    renamed = source.gsub(/[^\w|.]/, "_")
+    FileUtils.mv source, renamed
+  rescue ArgumentError => e
+    puts e.message
+  end
 end
 
 File.open("list.txt", "w") do |file|

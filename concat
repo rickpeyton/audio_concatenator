@@ -1,0 +1,2 @@
+docker run --rm -v $(pwd):/app audio_concatenator ruby concat.rb
+docker run --rm -v $(pwd):/app audio_concatenator
